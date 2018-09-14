@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string c="abc";
+	string a = c;
+	a = "cba";
+	cout << c << endl;
+	cout << &a << endl;
+	cout << &c << endl;
+	getchar();
+	return 0;
+}
+
+
+运行结果：
+abc
+0115FD58
+0115FD7C
+
+(结果c的值不改变，a的地址为0115FD58，c的地址为0115FD7C)
+
+
+
