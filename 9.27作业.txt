@@ -1,0 +1,27 @@
+①在java中，所有的泛型集合存放的值或者变量统一转换为Object类型。又因为object类型是java中
+    最大的类型，所以所有的值或变量都能够达到不需要强转就能变换为object类型。
+
+②当加基本数值到list时会装包为java提供的封装类(比如Integer)，而拆包就是将封装包里的object类型
+转换成基本类型。
+
+③Integer中的数值是引用传递的
+
+import java.util.*;
+class test{
+@SuppressWarnings("unchecked")
+    public static void main(String[] args){
+                    
+	    List<Integer> list=new ArrayList<>(1);
+                                Integer integer1=new Integer(6);
+                                list.add(integer1);
+		integer1=list.get(0);
+		int cnt=(Integer)integer1;
+		System.out.print(cnt);
+	}
+}
+输出结果为6
+
+
+
+
+
